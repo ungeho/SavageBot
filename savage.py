@@ -16,7 +16,6 @@ TOKEN = os.environ['SAVAGEBOT_TOKEN']
 
 CHANNEL_ID = 819198501958451211  # 任意のチャンネルID(int)
 
-
 # Intentsオブジェクトを生成
 # 全てのIntentをTrue
 intents = discord.Intents.all()
@@ -82,6 +81,12 @@ jst = datetime.timezone(datetime.timedelta(hours=9))
 # 毎日特定に処理したい（特定の時間を設定）
 time = datetime.time(hour=0, minute=0, tzinfo=jst)
 
+# 複数の時間を指定する場合は以下のように
+# times = [
+#     datetime.time(hour=8, tzinfo=jst),
+#     datetime.time(hour=12, minute=30, tzinfo=jst),
+#     datetime.time(hour=16, minute=40, second=30, tzinfo=jst)
+# ]
 
 # 特定の時刻になったら処理を行う
 # ループする関数
